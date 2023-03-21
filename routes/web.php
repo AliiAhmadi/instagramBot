@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     // DB::table("posts")->where("id", 10)->where("email", "ali@gmail.com")->get();
+
+//     // return view("main");
+// });
+
+
+ROute::get("/", "App\Http\Controllers\MainController@index");
